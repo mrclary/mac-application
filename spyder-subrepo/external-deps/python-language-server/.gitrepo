@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/palantir/python-language-server.git
+	branch = jedi-environment-variables
+	commit = 50f77bcfdb4e58dc57213411270dcca020ab7783
+	parent = 8078254bf3162e787d0c243f129091bbffcb2f0f
+	method = merge
+	cmdver = 0.4.1
