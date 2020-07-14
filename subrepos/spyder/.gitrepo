@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ../spyder
+	branch = build
+	commit = d9df164aa3a3e9f5ecdd65695a7a6d6ab2b02ffb
+	parent = 734e65a171368e704a9f9eee6c99a537fd058e18
+	method = merge
+	cmdver = 0.4.1
