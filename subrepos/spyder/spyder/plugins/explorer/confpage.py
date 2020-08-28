@@ -26,17 +26,15 @@ class ExplorerConfigPage(PluginConfigPage):
         # Widgets
         general_widget = QWidget()
         check_show_all = newcb(_("Show all files"), 'show_all')
-        check_show_hidden_files = newcb(_("Show hidden files"), 'show_hidden')
+        check_icon = newcb(_("Show icons and text"), 'show_icontext')
         check_single_click = newcb(_("Single click to open files"),
                                    'single_click_to_open')
         edit_filename_filters = self.create_textedit(
-            _("Show files with these extensions:"),
+            _("Edit filename filters..."),
             'name_filters',
             tip=("Enter values separated by commas"),
             content_type=list,
         )
-        edit_filename_filters.setEnabled(not check_show_all.isChecked())
-
         associations_widget = QWidget()
         self.edit_file_associations = self.create_textedit(
             '',
@@ -53,7 +51,7 @@ class ExplorerConfigPage(PluginConfigPage):
         # Layout
         layout = QVBoxLayout()
         layout.addWidget(check_show_all)
-        layout.addWidget(check_show_hidden_files)
+        layout.addWidget(check_icon)
         layout.addWidget(check_single_click)
         layout.addWidget(edit_filename_filters)
         general_widget.setLayout(layout)
@@ -75,8 +73,6 @@ class ExplorerConfigPage(PluginConfigPage):
 
         # Signals
         file_associations.sig_data_changed.connect(self.update_associations)
-        check_show_all.toggled.connect(
-            lambda show_all: edit_filename_filters.setEnabled(not show_all))
 
     def update_associations(self, data):
         """

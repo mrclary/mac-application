@@ -98,7 +98,7 @@ class DependenciesDialog(QDialog):
         self.setWindowTitle("Spyder %s: %s" % (__version__,
                                                _("Dependencies")))
         self.setWindowIcon(ima.icon('tooloptions'))
-        self.setModal(False)
+        self.setModal(True)
 
         # Layout
         hlayout = QHBoxLayout()

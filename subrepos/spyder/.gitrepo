@@ -5,8 +5,8 @@
 ;
 [subrepo]
 	remote = ../spyder
-	branch = build
-	commit = 59f8d6bf040ffb9caa74f909251efb77d96a5bc7
-	parent = 49adc9e265fe93bcb7dd887446a2ba4514bdc0fa
+	branch = testbuild
+	commit = 76e806eadba74d139786c31c1d39381fb0273094
+	parent = d3982e5cdf3a123e2071fd6f9df29034564d9383
 	method = merge
 	cmdver = 0.4.1
